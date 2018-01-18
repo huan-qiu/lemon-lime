@@ -1,0 +1,45 @@
+head
+	meta(charset="utf-8")
+	meta(http-equiv="X-UA-Compatible" content="IE=edge, chrome=1")
+	meta(name="viewport" content="width=device-width, initial-scale=1")
+	-
+		var pageDescription = page.title || config.description || '';
+		if (page.tags && page.tags.length) {
+			var tagsString = page.tags.map(function(val) {return val.name}).join(',');
+		}
+		var pageKeywords = page.keywords || tagsString || '';
+	meta(name="description" content= pageDescription)
+	meta(name="author" content= config.author)
+	meta(name="keywords" content= pageKeywords)
+	meta(name="copyright" content= _p('copyright.liscense_type'))
+	//- 确定页面title栏的内容
+	title
+		if is_post()
+			| #{titlecase(page.title)}
+		if is_archive()
+			| Archives
+		if is_tag()
+			| Tags
+		if is_category()
+			| Categories
+		if is_home()
+			| #{titlecase(config.title)}
+
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+		script(src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js")
+		script(src="https://cdn.bootcss.com/respond/1.4.2/respond.min.js")
+	<![endif]-->
+	//- 设置网址的图标，有hexo的helper可以实现
+	link(rel="icon" href= theme.favicon)
+	link(rel='stylesheet' href="/compass/stylesheets/font-awesome.min.css")
+	
+	//- 判断是否使用Algolia Search
+	if theme.algolia_on
+		<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.0.0/dist/instantsearch.min.css">
+	//- 用来传给脚本主题配置文件里头的值
+	include from-config.pug	
+
+	//- 导入自定义的样式表
+	link(rel="stylesheet" href="/compass/stylesheets/screen.css")
+

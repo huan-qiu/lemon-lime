@@ -1,0 +1,20 @@
+-
+	var options = {
+		prev_text: '<i class="fa fa-chevron-left"></i>',
+		next_text: '<i class="fa fa-chevron-right"></i>',
+		mid_size: 1,
+		end_size: 0,
+	}
+
+#pagination-wrapper
+	if is_post()	
+		if page.prev
+			- var pagePrevTitle = page.prev.title.length > 40 ? page.prev.title.slice(0, 40) + '...' : page.prev.title
+			- var prevTitle = pagePrevTitle || _p('page_title')
+			a#page-prev(href=url_for(page.prev.path)) #[i.fa.fa-chevron-left] #{prevTitle}
+		if page.next
+			- var pageNextTitle = page.next.title.length > 40 ? page.next.title.slice(0, 40) + '...' : page.next.title
+			- var nextTitle = pageNextTitle || _p('page_title')
+			a#page-next(href=url_for(page.next.path)) #{nextTitle} #[i.fa.fa-chevron-right]
+	else
+		#pagination!= paginator(options)

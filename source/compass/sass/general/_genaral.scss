@@ -1,0 +1,43 @@
+html {
+	height: 100%;
+}
+
+body {
+	min-height: 100%;
+	min-width: 440px;
+	height: 100%;
+	color: $fontColor;
+	font-family: "Open Sans", "Helvetica Neue", 'Lato','-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue' ,Helvetica,Arial,sans-serif;
+}
+
+#body-inner-wrapper {
+	min-height: 100%;
+}
+
+a {
+	text-decoration: none;
+	color: $fontColor;
+	&:hover {
+		
+		text-decoration: none;
+		color: rgba(0,0,0,.5);
+	}
+}
+
+
+ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+
+// 用来消掉目录表前面多出来的数字
+ol {
+	list-style: none;	
+}
+
+
+p {
+	line-height: 2;
+}

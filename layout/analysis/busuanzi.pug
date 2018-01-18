@@ -1,0 +1,13 @@
+//- from: http://busuanzi.ibruce.info 
+//- http://ibruce.info/2015/04/04/busuanzi/
+//- 判断当前页面的类型，来显示不同的统计数据
+#viewed-record
+	script(async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js")
+	if is_post()
+		span#busuanzi_container_page_pv.
+			#[i.fa.fa-eye(aria-hidden="true")] #[span#busuanzi_value_page_pv]
+	else
+		span#busuanzi_container_site_uv.
+			#[i.fa.fa-user(aria-hidden="true")] #[span#busuanzi_value_site_uv]
+		span#busuanzi_container_site_pv.
+			Total #[i.fa.fa-eye(aria-hidden="true")] #[span#busuanzi_value_site_pv]

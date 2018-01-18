@@ -1,0 +1,29 @@
+// 博文中tags和categories
+#post-tags-container {
+	font-size: 1.05em;
+	line-height: 1.5;
+}
+#post-categories-container i, #post-tags-container i {
+	color: $semi-transparent-fontColor;
+}
+
+// 位于右上角，绝对定位的ancestor element是相对定位的#body-inner-wrapper
+#post-categories-container {
+	position: absolute;
+	top: 420px;
+	right: 17px;
+	color: $semi-transparent-fontColor;
+	a {
+		color: $semi-transparent-fontColor;
+	}
+	
+}
+// 位于main content的左下角
+a.post-tag {
+	padding: 5px 10px;
+	@include background-image(linear-gradient(284deg, $green1, $green2));
+	// @include background-image(linear-gradient(80deg, #00aeff, #3369e7));
+	@include border-radius(5px);
+	color: #fff;
+	font-size: .9em;
+}

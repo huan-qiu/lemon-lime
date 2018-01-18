@@ -1,0 +1,45 @@
+#pagination-wrapper {
+	overflow: hidden;
+	padding-bottom: 10px;
+	margin-top: 50px;
+	text-align: center;
+	color: $fontColor;
+
+
+	@at-root {
+		#pagination {
+			@include inline-block();
+			font-size: 1.1em;
+			
+
+			// 页码的数字
+			.page-number {
+				text-decoration: underline;
+				padding: 0 7px;
+				margin-right: 10px;
+
+			}
+			// .current指的是当前页面的页码
+			.current {
+				background-color: $yellow2;
+			}
+		}
+
+		#page-prev {
+			float: left;
+			margin-left: 8px;
+			i {
+				color: $yellow2;
+			}
+		}
+
+		#page-next {
+			float: right;
+			margin-right: 8px;
+
+			i {
+				color: $yellow2;
+			}
+		}
+	}
+}

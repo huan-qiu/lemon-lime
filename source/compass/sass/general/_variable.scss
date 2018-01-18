@@ -1,0 +1,25 @@
+// ==== lemon-lime 主题的特征性配色 ====
+// 1深2浅
+$yellow1: #fcb43a;
+$yellow2: #fedd4e;
+$green1: #1cc7d0;
+$green2: #2dde98;
+// this one is paired with #fff
+$zebraBgColor: #f9fafb;
+
+// ==== 字体颜色 =====
+$fontColor: rgba(32, 28, 56, 0.8);
+$semi-transparent-fontColor: rgba(32, 28, 56, 0.3);
+
+// ==== 宽度控制 ====
+// nav从expanded 到变成 navIcon && post的toc从有到无的临界点
+$critical-width: 768px;
+// header里头banner的背景图片消失的临界点
+$banner-bg-img-gone-width: 700px;
+
+// ==== 背景图片 =====
+// banner的
+$bannerImg: "/compass/imgs/fHangingClothes.png";
+// siteName的
+$logoImg: "/compass/imgs/logo.png";
+

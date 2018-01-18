@@ -1,0 +1,24 @@
+-
+	var categories = []
+	if (is_post())
+		if (page.categories && page.categories.length)
+			page.categories.forEach(function(item) {
+				categories.push('<a href="' + url_for(item.path) + '">' + item.name + '</a>')
+			})
+
+	if (is_archive())
+		if (value.categories && value.categories.length)
+			value.categories.forEach(function(item) {
+				categories.push('<a href="' + url_for(item.path) + '">' + item.name + '</a>')
+			});
+
+
+if categories.length>0
+	if is_post()
+		#post-categories-container
+			| #[i.fa.fa-folder-open]
+			|  !{categories.join(" / ")}
+	if is_archive()
+		.post-group-item-categories
+			| #[i.fa.fa-folder-open]
+			|  !{categories.join(" / ")}

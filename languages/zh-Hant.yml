@@ -1,0 +1,37 @@
+# 导航栏的文字
+nav:
+  Home: 主頁
+  Archives: 歸檔
+  Tags: 標籤
+  Catogories: 分類
+
+# header里头的 #post-title值
+header_archive: 博文歸檔
+header_category: 分類列表
+header_tag: 標籤雲
+year: ' 年 '
+month: ' 月'
+
+# page title
+page_title: 無題
+page_without_excerpt: 這篇博文沒有摘要。
+
+# 用来给读者看了post的excerpt之后，想阅读原文的文字提示，会被处理成有连接的格式。
+excerpt_link: 閱讀全文
+
+# icon tooltip
+toTop_tooltip: 回到頂部
+toggle_on_tooltip: 點擊關閉目錄
+toggle_off_tooltip: 點擊打開目錄
+
+# 字數時間統計相關的文字信息
+word_count: 全文共 %d 字
+time_count: 需閱讀時間約 %d 分鐘
+
+#版权声明
+copyright_statement: 除非有特別聲明，本博客所有文章均采用 <a rel="license" href=%s>%s 協議</a>.
+
+
+# footer相關的文字信息
+theme_info: 主題 - <a id='theme-name' href=""> Lemon Lime</a>
+power_by: 驅動 - <a id='theme-powered-by' href=%s> Hexo</a>

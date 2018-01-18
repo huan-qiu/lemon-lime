@@ -1,0 +1,17 @@
+-
+	function getZhEnWordCounted(str) {
+		if (!str) return 0;
+		// CJK的区间
+		var ptn = /\w+|[\u4e00-\u9fff]|[\u3400-\u4DBF]|[\u20000–\u2A6DF]|[\u2A700–\u2EBEF]/g;
+		var wordsArr = str.match(ptn);
+		return (wordsArr) ? wordsArr.length : 0;
+	}
+
+	function getRoughReadingTime(wordsum) {
+		return (wordsum) ? Math.ceil(wordsum/300) : 0;
+	}
+
+	var tagPtn = /<.+?>/g;
+	var validContent = page.content.replace(tagPtn, ' ');
+	var sum = getZhEnWordCounted(validContent)
+	var time = getRoughReadingTime(sum)

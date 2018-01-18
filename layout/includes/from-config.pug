@@ -1,0 +1,13 @@
+-
+	var algolia = {};
+	if (theme.algolia_on) {
+		algolia = theme.algolia;
+		algolia.root = config.url + '/';
+
+	}
+	algolia.on = theme.algolia_on;
+	algolia = JSON.stringify(algolia);
+
+script.
+	var algoliaConfig = !{algolia}
+

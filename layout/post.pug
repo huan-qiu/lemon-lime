@@ -1,0 +1,19 @@
+extends includes/layout.pug
+
+
+block TOC
+	aside#toc-column
+		//- 这个block的渲染与否取决于当前视窗的宽度，具体的控制在scss文件里头实现。
+		#toc-column-inner-wrapper
+			- var contentsOptions = {list_number: theme.toc.list_number_on};
+			#post-toc!= toc(page.content, contentsOptions)
+
+
+
+block mainContent
+	main#main-content-column
+		#main-content-wrapper
+			#post-full-content!= page.content
+			include includes/post-tags
+			include includes/post-categories
+		

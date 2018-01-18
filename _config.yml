@@ -1,0 +1,64 @@
+# yml 缩进用空格，不能用tab，空格个数无所谓，只要层次一致就可以
+
+# ==== Nav link====
+# key: value
+nav:
+  Home: /
+  Archives: /archives
+  Tags: /tags
+  Catogories: /categories
+# ==== site logo ====
+favicon: '/compass/imgs/favicon.ico'
+
+
+# ==== Table of Content ====
+toc:
+  list_number_on: false  # 如果设为true，则正文标题里头不要出现数字排序，不然会重复
+
+# ==== Copyright ====
+copyright_on: true
+copyright:
+  liscense_type: CC BY-NC-SA 4.0
+  liscense_link: http://creativecommons.org/licenses/by-nc-sa/4.0/
+
+# ==== Footer Setting ====
+inception: 2017
+hexo_link: http://hexo.io
+email_address:
+social_media:
+  # key: value, each val, key in obj
+  github: 
+    name: github
+    address:
+    icon: fa-github
+  weibo:
+    name: weibo
+    address:
+    icon: fa-weibo
+  facebook:
+    name: facebook
+    address:
+    icon: fa-facebook
+  twitter:
+    name: twitter
+    address:
+    icon: fa-twitter
+
+# ==== Additional Setting ====
+# View Count by busuanzi
+busuanzi_on: true
+
+
+
+# Algolia Search
+algolia_on: true
+algolia:
+  applicationID:
+  apiKey:
+  indexName:
+  chunkSize: 5000
+  field:
+    - title
+    - path
+    - excerpt:strip
+    - excerpt

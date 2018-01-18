@@ -1,0 +1,91 @@
+// 用来设置hexo自带的高亮的样式
+
+// 这个类用来匹配figure这个tag
+.highlight {
+	overflow: scroll;
+	@include border-radius(5px);
+	border: 1px solid #ccc;
+	font-family: times, sans-serif;
+	font-size: .9em;
+	font-weight: normal;
+	line-height: 1.5;
+
+
+}
+
+
+figcaption {
+	border-bottom: 1px solid #eee;
+	font-family: times, sans-serif;
+	line-height: 2;
+	letter-spacing: .5px;
+	span, a {
+		padding: 0px 10px;
+		
+	}
+
+}
+
+
+// gutter这个类匹配行数
+figure .gutter {
+	color: rgba(0,0,0,.3);
+	padding-right: 5px;
+	padding-left: 20px;
+	border: 1px solid transparent;
+	border-right: 1px solid #eee;
+	
+}
+
+figure table {
+	border: 1px solid transparent;
+}
+
+// code这个类匹配代码
+figure .code {
+	color: $fontColor;
+	padding-left: 20px;
+	border: 1px solid transparent;
+	font-family: times, sans-serif;
+}
+// 被marked的代码
+span.marked {
+	background-color: rgba(137,149,199,0.2);
+}
+
+// 代码里头的字符串
+span.string {
+	color: green;
+}
+
+// 代码里头的数字
+span.number {
+	color: rgb(135, 104, 227);
+	font-weight: bold;
+}
+
+// 代码里头的keyword
+span.keyword, span.built_in {
+	color: rgb(175, 2, 84);
+}
+
+span.comment {
+	color: #ccc;
+}
+
+span.function {
+	color: orange;
+
+}
+
+span.params {
+	color: rgb(4, 118, 169);
+}
+span.literal {
+	color: $yellow1;
+}
+
+.highlight.line.marked {
+	color: red;
+}
+

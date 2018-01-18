@@ -1,0 +1,37 @@
+# 导航栏
+nav:
+  Home: 主页
+  Archives: 归档
+  Tags: 标签
+  Catogories: 分类
+
+# header里头的 #post-title值
+header_archive: 博文归档
+header_category: 分类列表
+header_tag: 标签云
+year: ' 年 '
+month: ' 月'
+
+# page title
+page_title: 无题
+page_without_excerpt: 这篇博文没有摘要。
+
+
+# 用来给读者看了post的excerpt之后，想阅读原文的文字提示，会被处理成有连接的格式。
+excerpt_link: 阅读全文
+
+# icon tooltip
+toTop_tooltip: 回到顶部
+toggle_on_tooltip: 点击关闭目录
+toggle_off_tooltip: 点击展开目录
+
+# 字数时间统计相关的文字信息
+word_count: 全文共 %d 字
+time_count: 需阅读时间约 %d 分钟
+
+#版权声明
+copyright_statement: 除非有特别声明，本博客所有文章均采用 <a rel="license" href=%s>%s 协议</a>.
+
+# footer相关的文字信息
+theme_info: 主题 - <a id='theme-name' href=""> Lemon Lime</a>
+power_by: 驱动 - <a id='theme-powered-by' href=%s> Hexo</a>

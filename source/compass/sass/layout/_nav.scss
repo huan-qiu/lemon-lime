@@ -1,0 +1,137 @@
+#nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	@include box-sizing(border-box);
+	min-width: 440px;
+	line-height: 1.8;
+	text-align: left;
+	color: $fontColor;
+	background-color: #fff;
+	z-index: 10000;
+	@include box-shadow(0 10px 40px 0 rgba(62, 57, 107, 0.07), 0 2px 9px 0 rgba(62, 57, 107, 0.06));
+
+	@at-root{
+		#nav-icon {
+			font-weight: bold;
+			color: $fontColor;
+			@media screen and (max-width: $critical-width) {
+				position: relative;
+				float: right;
+				margin-right: 15px;
+				margin-top: 13px;
+				margin-left: 10px;
+			}
+
+			@media screen and (min-width: $critical-width) {
+				display: none!important;
+			}
+
+			&:hover {
+				color: black;
+				cursor: pointer;
+			}
+
+		}
+
+		#nav-list {
+			@media screen and (min-width: $critical-width) {
+				display: none!important;
+			}
+
+			@media screen and (max-width: $critical-width) {
+				display: none;
+				position: absolute;
+				top: 60px;
+				right: 8px;
+				padding: 0;
+				list-style: none;
+				// z-index: 10000;
+				text-align: left;
+				background-color: #fff;
+				border: 2px solid rgba(62, 57, 107, 0.07);
+				@include border-radius(5px);
+				@include box-shadow(5px 2px 5px 0 rgba(62, 57, 107, 0.07), -5px 2px 5px 0 rgba(62, 57, 107, 0.06));
+
+			}
+
+		
+
+			@at-root {
+				a.nav-list-item {
+					display: block;
+					padding: 0 35px;
+					font-size: .95em;	
+					line-height: 2.5;
+					border-bottom: 1px solid #eee;
+
+					&:hover {
+						text-decoration: none;					
+					}		
+					
+				}
+
+			}
+
+		}
+
+		#site-name {
+			@include inline-block();
+			padding: 10px 0 10px 65px;
+			margin: 5px 0 5px 10px;
+			font-weight: bold;
+			font-size: 1.1em;
+			background-image: url($logoImg);
+			background-repeat: no-repeat;
+			letter-spacing: 1px;
+			
+			// 135px
+			@include background-size(auto 50px);
+		}
+
+		#nav-expanded {
+			margin-top: 3px;
+			margin-right: 7px;
+			letter-spacing: 1.5px;
+			@media screen and (max-width: $critical-width) {
+				display: none;
+			}
+			@media screen and (min-width: $critical-width) {
+				display: block;
+				float: right;
+			}
+
+
+			@at-root{
+				.nav-word-item { 
+					@include inline-block();
+					padding: 7px;
+					text-decoration: none;
+					color: $fontColor;
+					margin: 5px 0;
+
+					&:hover {
+						background-color: rgba(0,0,0,.05);
+						text-decoration: none;
+						cursor: pointer;
+					}
+				}
+				
+			}
+		}
+
+		.fa-search {
+			display: block;
+			float: right;
+			margin-top: 20px;
+			margin-right: 10px;
+			&:hover {
+				color: black;
+				cursor: pointer;
+			}
+		}
+
+	}	
+
+}

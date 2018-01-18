@@ -1,0 +1,42 @@
+header#page-header
+	include nav.pug
+	//- banner-wrapper来放背景图片
+	#banner-wrapper
+		//- banner-pagetype-dependent-info 垂直居中，水平左40%显示
+		#banner-pagetype-dependent-info
+			//- 所有页面的大标题，都用#post-title表示
+			if is_post()
+				//- 博文标题，创建时间
+				- var pageTitle = page.title.length > 40 ? page.title.slice(0, 40) + '...' : page.title
+				h1#post-title= titlecase(pageTitle) || _p('page_title')
+				span#post-description #[i.fa.fa-calendar(aria-hidden="true")] #{page.date.format(config.date_format)}
+				//- 博文字数&时间
+				include ../analysis/countWordsAndTime.pug
+				span#word-count= _p('word_count', sum)
+				span#time-count= _p('time_count', time)
+			else if is_tag()
+				h1#post-title= (page.tag !== 'tagsHomePage' ? page.tag : _p('header_tag'))
+			else if is_category()
+				h1#post-title= (page.category!== 'categoriesHomePage' ? page.category : _p('header_category'))
+			else if is_archive()
+				if (page.year)
+					h1#post-title= page.year + (page.month ? _p('year') + page.month + _p('month') : "")
+				else
+					h1#post-title= _p('header_archive')
+
+			else
+				//- 即home page的情况：博客名字，博客描述
+				h1#post-title= titlecase(config.title)
+				span#post-description= titlecase(config.description)
+	
+	//- 以下是博文里头的3个可点击的icon btn
+	//- to-Top btn
+	a(title= _p('toTop_tooltip')): i#to-Top.fa.fa-arrow-up(aria-hidden="true")
+	if is_post()
+		//- toggle-on btn
+		a(title= _p('toggle_on_tooltip')): i#toggle-on-Toc.fa.fa-toggle-on(aria-hidden="true")
+		//- toggle-off btn
+		a(title= _p('toggle_off_tooltip')): i#toggle-off-Toc.fa.fa-toggle-off(aria-hidden="true")
+
+	
+	

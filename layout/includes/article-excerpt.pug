@@ -1,0 +1,31 @@
+each value in page.posts.data
+	-
+		var postDate = value.date.format(config.date_format)
+		var postAuthor = value.author
+		var postExcerpt = value.excerpt || _p('page_without_excerpt') || ''
+
+
+	//- 博文首页的博文列表+摘要
+	article.each-post
+		//- 博文的 title
+		.each-post-meta
+			span.each-post-title
+				- var pageTitle = value.title.length > 40 ? value.title.slice(0, 40) + '...' : value.title
+				a(href= url_for(value.path))= titlecase(pageTitle) || _p('page_title')
+			span.each-post-date  #[i.fa.fa-calendar(aria-hidden="true")] #{postDate}
+			
+		.each-post-excerpt
+			| !{postExcerpt}
+		div: a.read-more(href= url_for(value.path))= _p('excerpt_link')
+			
+			
+
+		
+			
+
+	
+			
+		
+
+
+		

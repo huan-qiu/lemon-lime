@@ -1,0 +1,21 @@
+doctype html
+//- include head
+| !{partial('includes/head', null, {cache: true})}
+
+body
+	//- 这个wrapper是用在post页面类型，为了toc而存在的
+	#body-inner-wrapper
+		//- include header
+		| !{partial('includes/header', null, {cache: true})}
+		if is_post()
+			block TOC		
+			block mainContent			
+		else		
+			block mainContent		
+
+		//- include pagination.pug
+		| !{partial('includes/pagination', null, {cache: true})}
+		//- include footer
+		| !{partial('includes/footer', null, {cache: true})}
+		//- include after-footer.pug
+		| !{partial('includes/after-footer', null, {cache: true})}

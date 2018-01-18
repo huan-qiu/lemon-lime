@@ -1,0 +1,51 @@
+#tag-cloud-container, #categories-list-container {
+	margin: 100px auto;
+	width: 70%;
+	text-align: center;
+}
+
+#tag-cloud a {
+	@include inline-block();
+	padding: 10px;
+	border-bottom: 2px solid transparent;
+	@include transition(border-bottom 1s);
+
+	&:hover {
+		border-bottom: 2px solid;
+	}
+}
+
+
+
+.category-list {
+	@include inline-block();
+	font-size: 1.4em;
+
+	ul {
+		padding-left: 20px;
+	}
+
+	a {
+		line-height: 1.5;
+		padding-left: 20px;
+		padding-right: 20px;
+		border-left: 4px solid $green1;
+
+		&:hover {
+			text-decoration: none;
+			background-color: #eee;
+		}
+	}
+
+}
+
+
+.category-list-count {
+	@include inline-block();
+	width: 25px;
+	height: 25px;
+	margin-left: 10px;
+	color: #fff;
+	@include background-image(linear-gradient(284deg, $green1, $green2));
+	@include border-radius(50%)
+}

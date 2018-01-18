@@ -1,0 +1,32 @@
+footer#page-footer
+	#footer-wrapper
+		-var currentYear = date(Date.now(), 'YYYY')
+		if theme.inception && theme.inception != currentYear
+			#blog-meta!= '&copy;' + theme.inception + '-' + currentYear + ' By ' + config.author + ' | ' + _p('theme_info') + ' | ' + _p('power_by', theme.hexo_link)			
+		else
+			#blog-meta!= '&copy;' + currentYear + ' By ' + config.author + ' | ' + _p('theme_info') + ' | ' + _p('power_by', theme.hexo_link)
+		if theme.busuanzi_on
+			include ../analysis/busuanzi.pug
+
+		if theme.copyright_on
+			#copyright-wrapper
+				| #[i.fa.fa-cc(aria-hidden="true")]
+				#copyright!= _p('copyright_statement', theme.copyright.liscense_link, theme.copyright.liscense_type)
+		//- footer最后一行的icon
+		#contact-me
+			#rss
+				a(href= url_for('/atom.xml'), type="application/atom+xml", rel="alternate",  target="_blank"): i.fa.fa-rss(aria-hidden="true")
+			
+			if (theme.email_address)
+				#email
+					a(href= 'mailto:' + theme.email_address + '?Subject=blog'): i.fa.fa-envelope(aria-hidden="true")
+
+			for val, key in theme.social_media			
+				if (theme.social_media[key].address)
+					span(id= theme.social_media[key].name)
+						a(href= theme.social_media[key].address)
+							i(class="fa " + theme.social_media[key].icon, aria-hidden="true")
+		
+
+					
+	

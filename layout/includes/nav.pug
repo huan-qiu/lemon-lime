@@ -1,0 +1,20 @@
+nav#nav
+	#site-name= config.title
+	i#nav-icon.fa.fa-bars.fa-2x(aria-hidden="true")
+	#nav-expanded
+		each val, key in theme.nav
+			a.nav-word-item(href=url_for(val))!= _p('nav.' + key)
+	#nav-list
+		ul
+			each val, key in theme.nav
+				li
+					a.nav-list-item(href=url_for(val))!= _p('nav.' + key)
+	
+	//- setting for algolia
+	if(theme.algolia_on)
+		i#search-btn.fa.fa-search(aria-hidden="true")
+		include ../search/algolia
+	
+
+
+

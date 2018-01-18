@@ -1,0 +1,62 @@
+
+.each-post:nth-child(even) {
+	background-color: $zebraBgColor;
+}
+.each-post {	
+	text-align: center;
+	.each-post-meta {
+		@include inline-block();
+		padding: 80px 20px 5px 20px;
+		border-bottom: 2px solid rgba(0,0,0,.07);
+		font-size: 1.6em;
+		
+
+		&:hover {
+			border-bottom: 2px solid $green2;
+		}
+
+
+		.each-post-date {
+			padding-left: 20px;
+			font-size: .5em;
+		}
+
+	}
+
+	.each-post-excerpt {
+		max-width: 750px;
+		margin-right: auto;
+		margin-left: auto;
+		@media screen and (max-width: $critical-width) {
+			padding-left: 10%;
+			padding-right: 10%;
+		}
+		font-size: 1em;
+		text-align: left;
+
+		h1,h2,h3,h4,h5,h6 {
+			font-size: 1em;
+		}
+	}
+
+
+	@at-root {
+		a.read-more {
+			@include inline-block();
+			padding: 8px 50px;
+			margin-top: 20px;
+			margin-bottom: 20px;
+			@include background-image(linear-gradient(284deg, $green1, $green2));		
+			@include border-radius(3px);	
+			color: #fff;
+			font-size: .9em;
+			letter-spacing: .5px;
+
+			&:hover {
+				@include box-shadow(0 1px 10px rgba(0, 0, 0, 0.2), 0 2px 4px 0 rgba(0, 0, 0, 0.1));
+			}
+			
+		}
+
+	}
+}

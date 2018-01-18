@@ -1,0 +1,123 @@
+// general #page-header setting, for index-like 页面类型, 此时其直系parent是 body 元素
+// 对于post的页面类型，#page-header的直系parent是#mainContentColumn
+#page-header {
+	padding-top: 60px;
+	line-height: 330px;
+	color: #fff;
+	@include background(linear-gradient(284deg, $yellow1, $yellow2));
+	text-align: left;
+	@media screen and (max-width: $banner-bg-img-gone-width) {
+		text-align: center;
+	}
+	
+	
+
+	@at-root {
+		#banner-wrapper {
+			@media screen and (min-width: $banner-bg-img-gone-width) {
+				background-image: url($bannerImg);
+				background-repeat: no-repeat;
+				background-position: 95% center;
+				// 135px
+				@include background-size(auto 250px);
+
+			}
+
+			@at-root {
+				#banner-pagetype-dependent-info{
+					@include inline-block();
+					overflow: hidden;
+					margin-left: 15%;
+					// 实现缩小窗口到一定程度，banner-pagetype-dependent-info居中显示
+					@media screen and (max-width: $banner-bg-img-gone-width) {
+						margin-left: 0;
+					}
+					vertical-align: middle;	
+					line-height: 1.3;
+					text-align: center;
+					letter-spacing: .5px;
+
+
+					@at-root {
+						// 因为post-title的parent是个inline-block，
+						// 所以，parent的宽度由post-title和其siblings撑起
+						#post-title {
+							margin: 0;
+							margin-bottom: 10px;
+							font-size: 3em;
+							font-weight: normal;
+						}
+
+						#post-description {
+							margin-right: 20px;
+						}
+
+						#word-count {
+							margin-right: 20px;
+						}
+
+
+					}
+
+				}
+
+			}
+			
+		}
+	
+		
+	}
+}
+
+// to-top btn
+.fa-arrow-up {
+	display: none;
+	position: fixed;
+	bottom: 20px;
+	z-index: 10001;	
+	right: 20px;
+	color: $fontColor;
+
+
+	&:hover {
+		color: black;
+		cursor: pointer;
+	}
+
+}
+
+// toggle-on btn && toggle-off btn
+// 实现在post页面类型的width > 1000的时候，toggle-on出现
+// 当toggle-on被点击之后，toc消失，toggle-off出现
+// 当toggle-off被点击之后，toc出现，toggle-on出现
+// 在这个过程中，要看看如果toc消失之后，页面框被缩小到宽度低于1000
+// 这时候，toggle-off会不会自动消失？不会的话，【试验证明，会的！】
+// 需要有一个事件监听器来检测视窗的尺寸,或者，可以用!important来试试【!import就够了】
+.fa-toggle-on, .fa-toggle-off {
+	position: fixed;	
+	z-index: 10001;	
+	color: $fontColor;
+	&:hover {
+			color: black;
+			cursor: pointer;
+		}
+}
+
+.fa-toggle-on, .fa-toggle-off{
+	@media screen and (min-width: $critical-width) {
+		bottom: 20px;
+		left: 10px;	
+	}
+
+	@media screen and (max-width: $critical-width) {
+		display: none!important;
+	}
+
+}
+
+.fa-toggle-off {
+	display: none;
+}
+
+
+

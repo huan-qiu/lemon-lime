@@ -1,0 +1,77 @@
+#page-footer {
+	position: relative;
+	bottom: 0px;
+	width: 100%;
+	margin-top: 40px;
+	line-height: 200px;
+	text-align: center;
+	letter-spacing: 1px;
+	color: rgba(255, 246, 164, 1);
+	@include background(linear-gradient(284deg, $yellow2, $yellow1));
+
+
+
+	@at-root {
+		
+		#footer-wrapper {
+			@include inline-block();
+			font-size: 14px;
+			line-height: 1.8;
+			vertical-align: middle;
+			color: rgba(255, 246, 164, 1);
+
+			// busuanzi 样式
+			#viewed-record {
+				@include inline-block();
+				margin-left: 25px;
+
+				@at-root {
+					#busuanzi_container_site_pv {
+						margin-left: 15px;
+					}
+				}
+			}
+
+			a {
+				color: rgba(255, 255, 255, .8);
+				border-bottom: 1px dotted;
+				&:hover {
+					color: #fff;
+				}
+
+			}
+
+			#contact-me a {
+				border-bottom: none;
+
+
+				@at-root {
+					#rss, #github, #email, #weibo, #facebook, #twitter{
+						@include inline-block();
+						margin: 0 10px;
+						font-size: 2em;
+					}
+				}
+
+			}
+
+
+			
+
+			@at-root {
+				#blog-meta {
+					display: inline;
+					color: rgba(255, 246, 164, .8);
+				}
+
+				#copyright {
+					display: inline;
+					margin-left: 5px;
+				}
+			}
+
+		}
+
+	}
+}
+

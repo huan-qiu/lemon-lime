@@ -1,0 +1,143 @@
+// 做成float，自适应程度高
+#algolia-wrapper {
+	display: none;
+	position: relative;
+	float: right;
+	@include box-sizing(border-box);
+	margin-right: 0px;
+	margin-top: 13px;	
+	@media screen and (min-width: $critical-width) {
+		width: 180px;
+	}
+	
+	@media screen and (max-width: $critical-width) {
+		width: 170px;
+	}
+	font-size: 1em;
+	line-height: 2;	
+	color: $fontColor;
+	
+
+	@at-root {
+
+		// ===== algolia-searchBox 开始 ======
+		// 输入的框
+		.ais-search-box--input {
+			@include box-sizing(border-box);
+			padding: 5px 20px 5px 25px;
+			background-color: rgba(62, 57, 107, 0.1);
+			border: 1px solid rgba(0,0,0,0);
+			@include border-radius(3px);
+			outline: none;
+
+		}
+
+		// 搜索符号的wrapper
+		.ais-search-box--magnifier-wrapper {
+			position: absolute;
+			top: 5px;
+			left: 0px;
+		}
+
+		.ais-search-box--reset-wrapper {
+			// 改变默认样式
+			display: block!important;
+		}
+		.ais-search-box--reset {
+			// 在加载的algolia里头已经默认是absolute的了，
+			// 其positioned ancestor是.ais-search-box(相对定位), 即和input一样大的尺寸
+			// position: absolute;			
+			top: 10px;
+			right: 10px;
+			outline: none;
+		}
+		// ===== algolia-searchBox 结束 ======
+
+		
+
+		#algolia-hits-wrapper {
+			display: none;
+			// 这里不用relative是因为#algolia-wrapper本身就是绝对定位的，如果这里也是绝对定位的话，
+			// #algolia-hits-wrapper就会在正常流里头，也就是nav会需要包括住整个#algolia-hits-wrapper
+			// 而这不是目标效果。
+			// position: relative;
+			position: absolute;
+			@media screen and (min-width: $critical-width) {
+				left: -180px;
+				width: 510px;
+			} 
+			
+			@media screen and (max-width: $critical-width) {
+				right: -10px;
+				width: 250%;
+			}
+			top: 45px;
+			font-size: 1.1em;
+			background-color: $zebraBgColor;
+			color: $fontColor;
+			text-align: left;
+			@include border-radius(5px);
+			@include box-shadow(0 10px 40px 0 rgba(62, 57, 107, 0.07), 0 2px 9px 0 rgba(62, 57, 107, 0.06));
+
+			// em里头的内容是match到的那部分信息，这里设置高亮效果，并override掉默认的italic字体样式
+			em {
+				background-color: $yellow2;
+				font-style: normal;
+			}
+
+			@at-root {
+				#brief {
+					padding-top: 20px;
+					font-size: .7em;
+					text-align: center;
+
+					.fa.fa-commenting {
+						padding-right: 5px;
+						color: #1cc7d0;
+					}
+				}
+
+				// 打印algolia的JSON response中提供的match到的post标题的<a>
+				.relatedTitles {
+					// 设置inline-block是为了设置其背景的时候，宽度可以铺满整个父容器。
+					@include inline-block();
+					padding: 0 20px;
+					border-left: 4px solid transparent;
+					&:hover {
+						border-left: 4px solid $yellow2;
+						font-weight: bold;
+					}
+				}
+				.ais-hits--item:nth-child(even) {
+					background-color: #fff;
+				}
+
+				.ais-hits__empty {
+					padding: 3px 20px;
+					text-align: center;
+				}
+
+				#algolia-pagination {
+					// display: none，不需要，直接让默认效果take charge就可以
+					text-align: center;
+
+					@at-root {
+						.ais-pagination--item__page .ais-pagination--link {
+							padding: 0 5px;
+						}
+						.ais-pagination--item__active a{
+							background-color: $yellow2;
+						}
+
+					}
+				}
+
+				
+			}
+		}
+		
+		
+
+	}
+
+}

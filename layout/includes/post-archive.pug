@@ -1,0 +1,26 @@
+- var tempYear = ''
+- var tempMonth = ''
+each value in page.posts.data
+	- var year = date(value.date, 'YYYY')
+	- var month = date(value.date, "MM")
+	//- 这里的名字起的不好，.post-group并不是个group，只是一个一个的博文。	
+	.post-group-item
+		if month !== tempMonth
+			- tempMonth = month
+			if year !== tempYear
+				- tempYear = year
+
+			if is_archive()
+				h2.post-group-title
+					a(href= config.root + 'archives/' + tempYear + '/' + tempMonth)= tempYear + _p('year') + tempMonth + _p('month')
+		
+		.post-group-meta-wrapper
+			section.post-group-item-meta
+				span.post-group-item-date #{value.date.format('MM-DD')} 
+				- var pageTitle = value.title.length > 40 ? value.title.slice(0, 40) + '...' : value.title 
+				a(href= url_for(value.path))=  titlecase(pageTitle) || _p('page_title')
+				.post-group-item-tag-category
+					if (value.tags && value.tags.length)
+						include post-tags
+					if (value.categories && value.categories.length)
+						include post-categories

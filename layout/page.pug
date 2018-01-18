@@ -1,0 +1,16 @@
+extends includes/layout
+//- "#3BE","#09C","#A6C","#93C","#9C0","#690","#FB3","#F80","#F44","#C00"
+block mainContent
+	if (page.tag === 'tagsHomePage')
+		#tag-cloud-container
+			#tag-cloud!= tagcloud({min_font: 20, max_font: 35, color: true,start_color: '#FB3', end_color: '#09C'})
+
+	else if (page.category === 'categoriesHomePage')
+		#categories-list-container
+			#category-list!= list_categories()
+	else
+		p This is a page!
+		
+		
+		
+

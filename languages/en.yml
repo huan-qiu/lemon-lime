@@ -1,0 +1,36 @@
+# nav bar
+nav:
+  Home: Home
+  Archives: Archives
+  Tags: Tags
+  Catogories: Catogories
+
+# header里头的 #post-title值
+header_archive: Archives
+header_category: Categories List
+header_tag: Tags Cloud
+year: ' - '
+month: ''
+
+# page title
+page_title: Something, Anything
+page_without_excerpt: No Excerpt Available for This Post.
+
+# artical excerpt text info
+excerpt_link: Read More
+
+# icon tooltip
+toTop_tooltip: Back to Top
+toggle_on_tooltip: Click to Toggle off
+toggle_off_tooltip: Click to Toggle on
+
+# word-time-count text info
+word_count: The total word count - %d  
+time_count: Estimated time of reading - %d mins
+
+# copyright statement
+copyright_statement: Except where otherwise noted, content on this blog is licensed under <a rel="license" href=%s>%s</a>.
+
+# footer text info
+theme_info: Theme - <a id='theme-name' href=""> Lemon Lime</a>
+power_by: Power By <a id='theme-powered-by' href=%s> Hexo</a>
