@@ -1,5 +1,6 @@
 header#page-header
-	include nav.pug
+	//- include nav.pug
+	| !{partial('includes/nav', null, {cache: true})}
 	//- banner-wrapper来放背景图片
 	#banner-wrapper
 		//- banner-pagetype-dependent-info 垂直居中，水平左40%显示

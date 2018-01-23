@@ -106,8 +106,9 @@ if (!headings || headings.length <=2 ) {
 		mainContentColumn.style.width = '80%';
 		// 是水平居中表示
 		mainContentColumn.style.margin = 'auto';
+		tocColumn.style.display = 'none';
 	}	
-	tocColumn.style.display = 'none';
+	
 	toggleOff.style.display = 'none';
 	toggleOn.style.display = 'none';
 		
