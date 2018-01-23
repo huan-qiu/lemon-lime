@@ -33,5 +33,5 @@ copyright_statement: 除非有特別聲明，本博客所有文章均采用 <a r
 
 
 # footer相關的文字信息
-theme_info: 主題 - <a id='theme-name' href=""> Lemon Lime</a>
+theme_info: 主題 - <a id='theme-name' href="https://github.com/huan555/lemon-lime"> Lemon-Lime</a>
 power_by: 驅動 - <a id='theme-powered-by' href=%s> Hexo</a>

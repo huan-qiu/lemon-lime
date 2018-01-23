@@ -4,7 +4,7 @@
 
 #toc-column {
 	font-size: .95em;
-	@media screen and (min-width: $critical-width) {
+	@media screen and (min-width: $critical-width-m1) {
 		display: block;
 		position: absolute;
 		left: 0;
@@ -17,7 +17,7 @@
 		
 	}
 
-	@media screen and (max-width: $critical-width) {
+	@media screen and (max-width: $critical-width-m) {
 		display: none!important;
 	}
 
@@ -50,7 +50,7 @@
 }
 
 #main-content-column {
-	@media screen and (min-width: $critical-width) {
+	@media screen and (min-width: $critical-width-m1) {
 		@include box-sizing(border-box);
 		margin-left: 28%;
 		width: 70%;
@@ -58,7 +58,7 @@
 		
 	}
 
-	@media screen and (max-width: $critical-width) {
+	@media screen and (max-width: $critical-width-m) {
 		width: 80%!important;
 		padding: 45px 0;
 		margin: 0 auto!important;

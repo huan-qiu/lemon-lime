@@ -6,11 +6,11 @@
 	@include box-sizing(border-box);
 	margin-right: 0px;
 	margin-top: 13px;	
-	@media screen and (min-width: $critical-width) {
+	@media screen and (min-width: $critical-width-m1) {
 		width: 180px;
 	}
 	
-	@media screen and (max-width: $critical-width) {
+	@media screen and (max-width: $critical-width-m) {
 		width: 170px;
 	}
 	font-size: 1em;
@@ -62,12 +62,12 @@
 			// 而这不是目标效果。
 			// position: relative;
 			position: absolute;
-			@media screen and (min-width: $critical-width) {
+			@media screen and (min-width: $critical-width-m1) {
 				left: -180px;
 				width: 510px;
 			} 
 			
-			@media screen and (max-width: $critical-width) {
+			@media screen and (max-width: $critical-width-m) {
 				right: -10px;
 				width: 250%;
 			}

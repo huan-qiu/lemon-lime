@@ -16,7 +16,7 @@
 		#nav-icon {
 			font-weight: bold;
 			color: $fontColor;
-			@media screen and (max-width: $critical-width) {
+			@media screen and (max-width: $critical-width-m) {
 				position: relative;
 				float: right;
 				margin-right: 15px;
@@ -24,7 +24,7 @@
 				margin-left: 10px;
 			}
 
-			@media screen and (min-width: $critical-width) {
+			@media screen and (min-width: $critical-width-m1) {
 				display: none!important;
 			}
 
@@ -36,11 +36,11 @@
 		}
 
 		#nav-list {
-			@media screen and (min-width: $critical-width) {
+			@media screen and (min-width: $critical-width-m1) {
 				display: none!important;
 			}
 
-			@media screen and (max-width: $critical-width) {
+			@media screen and (max-width: $critical-width-m) {
 				display: none;
 				position: absolute;
 				top: 60px;
@@ -94,10 +94,10 @@
 			margin-top: 3px;
 			margin-right: 7px;
 			letter-spacing: 1.5px;
-			@media screen and (max-width: $critical-width) {
+			@media screen and (max-width: $critical-width-m) {
 				display: none;
 			}
-			@media screen and (min-width: $critical-width) {
+			@media screen and (min-width: $critical-width-m1) {
 				display: block;
 				float: right;
 			}

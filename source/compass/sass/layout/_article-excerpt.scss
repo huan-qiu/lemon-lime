@@ -25,9 +25,8 @@
 
 	.each-post-excerpt {
 		max-width: 750px;
-		margin-right: auto;
-		margin-left: auto;
-		@media screen and (max-width: $critical-width) {
+		margin: 16px auto;
+		@media screen and (max-width: $critical-width-m) {
 			padding-left: 10%;
 			padding-right: 10%;
 		}

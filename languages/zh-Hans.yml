@@ -33,5 +33,5 @@ time_count: 需阅读时间约 %d 分钟
 copyright_statement: 除非有特别声明，本博客所有文章均采用 <a rel="license" href=%s>%s 协议</a>.
 
 # footer相关的文字信息
-theme_info: 主题 - <a id='theme-name' href=""> Lemon Lime</a>
+theme_info: 主题 - <a id='theme-name' href="https://github.com/huan555/lemon-lime"> Lemon-Lime</a>
 power_by: 驱动 - <a id='theme-powered-by' href=%s> Hexo</a>

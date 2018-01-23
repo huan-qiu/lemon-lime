@@ -13,13 +13,18 @@ $semi-transparent-fontColor: rgba(32, 28, 56, 0.3);
 
 // ==== 宽度控制 ====
 // nav从expanded 到变成 navIcon && post的toc从有到无的临界点
-$critical-width: 768px;
+$critical-width-m: 768px;
+$critical-width-m1: 769px;
+
+$critical-width-xl: 1200px;
+$critical-width-xl1: 1201px;
+
 // header里头banner的背景图片消失的临界点
 $banner-bg-img-gone-width: 700px;
-
+$banner-bg-img-gone-width1: 701px;
 // ==== 背景图片 =====
 // banner的
-$bannerImg: "/compass/imgs/fHangingClothes.png";
+$bannerImg: "/compass/imgs/arrow.png";
 // siteName的
 $logoImg: "/compass/imgs/logo.png";
 

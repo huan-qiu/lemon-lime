@@ -14,17 +14,24 @@
 
 	@at-root {
 		#banner-wrapper {
-			@media screen and (min-width: $banner-bg-img-gone-width) {
-				background-image: url($bannerImg);
-				background-repeat: no-repeat;
+			visibility: hidden;
+			background-image: url($bannerImg);
+			background-repeat: no-repeat;
+			@include background-size(auto 250px);
+			@media screen and (min-width: $banner-bg-img-gone-width1) and (max-width: $critical-width-xl){
+				visibility: visible;
 				background-position: 95% center;
 				// 135px
-				@include background-size(auto 250px);
+			}
 
+			@media screen and (min-width: $critical-width-xl1) {
+				visibility: visible;
+				background-position: 90% center;
 			}
 
 			@at-root {
 				#banner-pagetype-dependent-info{
+					visibility: visible;
 					@include inline-block();
 					overflow: hidden;
 					margin-left: 15%;
@@ -104,12 +111,12 @@
 }
 
 .fa-toggle-on, .fa-toggle-off{
-	@media screen and (min-width: $critical-width) {
+	@media screen and (min-width: $critical-width-m1) {
 		bottom: 20px;
 		left: 10px;	
 	}
 
-	@media screen and (max-width: $critical-width) {
+	@media screen and (max-width: $critical-width-m) {
 		display: none!important;
 	}
 
