@@ -107,10 +107,11 @@ if (!headings || headings.length <=2 ) {
 		// 是水平居中表示
 		mainContentColumn.style.margin = 'auto';
 		tocColumn.style.display = 'none';
+		toggleOff.style.display = 'none';
+		toggleOn.style.display = 'none';
 	}	
 	
-	toggleOff.style.display = 'none';
-	toggleOn.style.display = 'none';
+	
 		
 }else{
 	// 正文中最后一个标题的offsetTop, 用来让高亮持续
