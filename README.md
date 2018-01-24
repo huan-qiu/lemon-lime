@@ -2,7 +2,7 @@
 
 #### screenshot for a home page with lemon-lime
 
-![screenshot for homepage with lemon-lime](https://ws4.sinaimg.cn/large/006tKfTcgy1fnrmy0zylzj31e40yan1j.jpg){:width="800"}
+![screenshot for homepage with lemon-lime](https://ws4.sinaimg.cn/large/006tKfTcgy1fnrmy0zylzj31e40yan1j.jpg)
 
 ### Features
 
