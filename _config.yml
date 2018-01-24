@@ -1,19 +1,16 @@
-# yml 缩进用空格，不能用tab，空格个数无所谓，只要层次一致就可以
-
 # ==== Nav link====
-# key: value
 nav:
   Home: /
   Archives: /archives
-  Tags: /tags
-  Catogories: /categories
+  Tags: /tags #extra work needed for this to work
+  Catogories: /categories #extra work needed for this to work
 # ==== site logo ====
-favicon: '/compass/imgs/favicon.ico'
+favicon: '/compass/imgs/favicon.ico' #the default favicon, feel free to change
 
 
 # ==== Table of Content ====
 toc:
-  list_number_on: false  # 如果设为true，则正文标题里头不要出现数字排序，不然会重复
+  list_number_on: false  #if this is set to 'true', headings of your posts should not have numerical ordered added manually. 
 
 # ==== Copyright ====
 copyright_on: true
@@ -26,32 +23,31 @@ inception: 2017
 hexo_link: http://hexo.io
 email_address:
 social_media:
-  # key: value, each val, key in obj
-  github: 
+  github:
     name: github
-    address:
+    address: https://github.com/yourUserName # replace this link with yours
     icon: fa-github
   weibo:
     name: weibo
-    address:
+    address: # add your link here, like the way you do with github's address or just ignore it
     icon: fa-weibo
   facebook:
     name: facebook
-    address:
+    address: # add your link here, like the way you do with github's address or just ignore it
     icon: fa-facebook
   twitter:
     name: twitter
-    address:
+    address: # add your link here, like the way you do with github's address or just ignore it
     icon: fa-twitter
 
 # ==== Additional Setting ====
 # View Count by busuanzi
-busuanzi_on: true
+busuanzi_on: true # set to false to disable the view count for your site and posts
 
 
 
 # Algolia Search
-algolia_on: true
+algolia_on: false # set to true to enable seach within your site, note that extra work needed
 algolia:
   applicationID:
   apiKey:
