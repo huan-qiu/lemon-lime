@@ -20,7 +20,7 @@
 
 ### Demo
 
-Vist [here](http://rachelqiu.com) for the demo.
+Visit [here](http://rachelqiu.com) for the demo.
 
 
 
