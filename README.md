@@ -44,7 +44,7 @@ npm install hexo-renderer-sass, hexo-renderer-jade --save
  **cd** into the `themes` folder, then
 
 ``` bash
-$ git clone https://github.com/huan555/lemon-lime.git
+$ git clone https://github.com/huan-qiu/lemon-lime.git
 ```
 
 
