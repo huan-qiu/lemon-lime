@@ -38,7 +38,7 @@ Visit [here](http://rachelqiu.com) for the demo.
 Enter your Hexo project's folder, install plugins that needed for `lemon-lime`
 
 ```bash
-npm install hexo-renderer-sass, hexo-renderer-jade --save
+npm install hexo-renderer-sass hexo-renderer-pug --save
 ```
 
  **cd** into the `themes` folder, then
